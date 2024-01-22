@@ -33,6 +33,7 @@ p {
 
 .item-img {
     width: 100%;
+    content: url("/images/image-product-mobile.jpg");
 }
 
 .content-container {
@@ -57,11 +58,15 @@ h2 {
     gap: 20px;
 }
 
-.pricing-container #current-price{
+.pricing-container #current-price {
     font-size: 25px;
     font-family: Fraunces;
     font-weight: 700;
     color: hsl(158, 36%, 37%);
+}
+
+.pricing-container #original-price {
+    text-decoration-line: line-through;
 }
 
 .button {
@@ -76,6 +81,34 @@ h2 {
     align-items: center;
 }
 
+.button:hover {
+    cursor: pointer;
+    background-color: hsl(158, 36%, 30%);
+}
+
 .button p {
     color: hsl(0, 0%, 100%);
+    font-weight: 700;
+}
+
+@media(min-width: 475px){
+    .card {
+        flex-direction: row;
+        width: 375px;
+        height: 375px;
+    }
+
+    .item-img {
+        content: url("/images/image-product-desktop.jpg");
+        height: 100%;
+    }
+
+    .img-container {
+        width: 1fr;
+    }
+
+    .content-container {
+        padding: 20px;
+        width: 1fr;
+    }
 }
